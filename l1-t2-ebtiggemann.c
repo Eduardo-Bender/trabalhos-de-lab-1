@@ -1,3 +1,11 @@
+//
+// para compilar este programa manualmente em linux:
+// gcc -Wall -o exemplo exemplo.c tela.c -lallegro_font -lallegro_color -lallegro_ttf -lallegro_primitives -lallegro
+//
+
+
+#include "tela.h"
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
