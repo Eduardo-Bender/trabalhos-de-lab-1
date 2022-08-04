@@ -33,7 +33,7 @@ void tela_fim(void);
 void tela_atualiza(void);
 
 // frequencia de atualizacao da tela
-#define QUADROS_POR_SEGUNDO 30.0
+#define QUADROS_POR_SEGUNDO 60.0
 #define SEGUNDOS_POR_QUADRO (1/QUADROS_POR_SEGUNDO)
 
 // DESENHO

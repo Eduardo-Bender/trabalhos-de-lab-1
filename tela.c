@@ -31,6 +31,7 @@ void tela_inicializa_janela(float l, float a, char n[])
   // pede para tentar linhas mais suaves (multisampling)
   al_set_new_display_option(ALLEGRO_SAMPLE_BUFFERS, 1, ALLEGRO_SUGGEST);
   al_set_new_display_option(ALLEGRO_SAMPLES, 8, ALLEGRO_SUGGEST);
+  al_set_new_display_flags(ALLEGRO_FULLSCREEN_WINDOW);
   // cria uma janela
   ALLEGRO_DISPLAY *janela;
   janela = al_create_display(l, a);
@@ -95,14 +96,14 @@ void tela_fim(void)
 double tempo_ultima_tela = 0;
 void tela_atualiza(void)
 {
-  double agora = relogio();
-  double quando_mostrar = tempo_ultima_tela + SEGUNDOS_POR_QUADRO;
-  double tempo_ate_mostrar = quando_mostrar - agora;
-  if (tempo_ate_mostrar > 0) {
-    // é muito cedo, dá uma cochilada
-    al_rest(tempo_ate_mostrar);
-  }
-  // troca a tela mostrada pela que foi desenhada em memória
+  // double agora = relogio();
+  // double quando_mostrar = tempo_ultima_tela + SEGUNDOS_POR_QUADRO;
+  // double tempo_ate_mostrar = quando_mostrar - agora;
+  // if (tempo_ate_mostrar > 0) {
+  //   // é muito cedo, dá uma cochilada
+  //   al_rest(tempo_ate_mostrar);
+  // }
+  // // troca a tela mostrada pela que foi desenhada em memória
   al_flip_display();
   tempo_ultima_tela = relogio();
 
